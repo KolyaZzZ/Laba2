@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>История видеокарт nvidia</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+ <style type="text/css">
+    .mystyle {color: blueviolet; font-family: "Verdana"}
+    .defstyle {color: black; font-family: "Georgia"}
+  </style>
+</head>
+<body>
+&nbsp;<div class="text">
+    <main>
+      <h1>История видеокарт NVIDIA</h1>
+       <p p class="defstyle" onMouseOver="this.className='mystyle'" onMouseOut="this.className='defstyle'">NVIDIA Corporation — американская технологическая компания, разработчик графических процессоров и систем-на-чипе (SoC). </p>
+      <p> Разработки NVIDIA получили распространение в индустрии видеоигр, сфере профессиональной визуализации, области высокопроизводительных вычислений и автомобильной промышленности, где бортовые компьютеры NVIDIA используются в качестве основы для беспилотных автомобилей. Важным приоритетом для компании также является рынок искусственного интеллекта (ИИ).</p>
+         <script type="text/javascript">
+          const secondParagraph = document.querySelectorAll("p")[1];
+          function changeParagraphStyle() {
+            secondParagraph.style.paddingRight = "3cm";
+            secondParagraph.style.textIndent = "2.5cm";
+          }
+          function resetParagraphStyle() {
+            secondParagraph.style.paddingRight = "";
+            secondParagraph.style.textIndent = "";
+          }
+          secondParagraph.addEventListener("mouseover", changeParagraphStyle);
+          secondParagraph.addEventListener("mouseout", resetParagraphStyle);
+        </script>
+        </details>&nbsp;<h2>Хронология выпуска видеокарт NVIDIA</h2>
+
+          <p class="news"><span class="date">8.6.1995 - </span>NV 1. Первый графический 3D-ускоритель от NVIDIA</p>
+          <p class="news"><span class="date">21.10.1998 - </span>Riva TNT. комбинированный 2D/3D ускоритель </p>
+          <p class="news"><span class="date">11.10.1999 - </span>GeForce 256. Первый GPU из линейки GeForce</p>
+          <p class="news"><span class="date">16.2.2002 - </span>GeForce 4. Под этим именем выпускалось две линейки карт, Ti – высокопроизводительные, и бюджетные с приставкой MX. </p>
+          <p class="news"><span class="date">13.1.2009 - </span>GeForce 100</p>
+          <p class="news"><span class="date">14.02.2014 - </span>GeForce 900. Линейка видеокарт основана на архитектуре Maxwell</p>
+          <p class="news"><span class="date">08.07.2016 - </span>GeForce GTX 10</p>
+          <p class="news"><span class="date">20.09.2018 - </span>GeForce 20</p>
+<div>
+  <img src="picture1.jpg" name="picture1" style="position: absolute; top: 400px; left: 10px; z-index: 0;">
+  <img src="picture2.jpg" name="picture2" style="position: absolute; top: 400px; left: 100px; z-index: 1;">
+  <img src="picture3.jpg" name="picture3" style="position: absolute; top: 400px; left: 200px; z-index: 2;">
+</div>
+<div style="position: absolute; top: 570px; left: 10px;">
+  <button onclick="document.getElementsByName('picture2')[0].style.visibility = 'hidden'">Hide middle image</button>
+  <button onclick="document.getElementsByName('picture2')[0].style.visibility = 'visible'">Show middle image</button>
+  <button onclick="swapLayers()"style="top: 800px">Swap layers</button>
+</div> 
+<script>
+function swapLayers() {
+  var image1 = document.getElementsByName('picture1')[0];
+  var image3 = document.getElementsByName('picture3')[0];
+  
+  var tempZIndex = image1.style.zIndex;
+  picture1.style.zIndex = picture3.style.zIndex;
+  picture3.style.zIndex = tempZIndex;
+}
+</script>
+    </main>
+
+  </div> 
+<div class= "navig"> 
+  <form name="buttons">
+    <input type="button" value="Window" onClick=""
+    style=" height: 35px;
+            width: 70px;
+    ">
+
+    <input type="button" value="Navigator" onClick="showNavigatorInfo()"
+    style=" height: 35px; 
+            width: 70px;
+    ">
+    <script type="text/javascript">
+      function showNavigatorInfo() {
+       alert("Браузер: " + navigator.appName + "  Версия: " + navigator.appVersion);}
+    </script>
+
+    <input type="button" value="Location" onClick="showLocationInfo()"
+    style=" height: 35px;
+            width: 70px;
+    ">
+    <script type="text/javascript">
+      function showLocationInfo() {
+        var username = prompt("Введите ваше имя:");
+        var locationInfo = "Имя пользователя: " + username + "\nАдрес загруженного документа: " + location.href;
+        alert(locationInfo); }
+    </script>
+
+    <input type="button" value="Screen" onClick="showScreenInfo()"
+    style=" height: 35px;
+            width: 70px;
+    ">
+    <script type="text/javascript">
+      function showScreenInfo() {
+        var screenInfo = "Ширина экрана: " + screen.width + "\nВысота экрана: " + screen.height + "\nГлубина цвета: " + screen.colorDepth;
+        var confirmation = confirm(screenInfo);
+        if (confirmation) {
+          alert(screenInfo); }
+      }
+    </script>
+  </form>
+ <script type="text/javascript">
+document.write(document.lastModified); 
+</script>
+</body>
+</html>
